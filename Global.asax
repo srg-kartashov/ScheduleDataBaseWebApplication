@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="ScheduleDataBaseWebApplication.Global_asax" Language="C#" %>
