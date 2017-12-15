@@ -92,6 +92,9 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterSuccess.aspx" />
     <Content Include="App_Data\NWind.mdf" />
+    <Content Include="App_Data\NWind_log.ldf">
+      <DependentUpon>NWind.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\SideMenu.xml" />
     <Content Include="App_Data\TopMenu.xml" />
     <Content Include="Content\Images\AquaHeader.jpg" />
@@ -102,6 +105,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Handbooks\Subject.aspx" />
+    <Content Include="_Документы\ДоступБД.txt" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Light.master" />
@@ -169,6 +174,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handbooks\Subject.aspx.cs">
+      <DependentUpon>Subject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Handbooks\Subject.aspx.designer.cs">
+      <DependentUpon>Subject.aspx</DependentUpon>
     </Compile>
     <Compile Include="Light.master.cs">
       <DependentUpon>Light.master</DependentUpon>
