@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Main.master"  Inherits="ScheduleDataBaseWebApplication._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Main.master" CodeBehind="AcademicTitle.aspx.cs" Inherits="ScheduleDataBaseWebApplication._Default" %>
 
 <%@ Register Assembly="DevExpress.Web.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxClasses" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
@@ -10,21 +10,21 @@
 
 
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" DeleteCommand="Subject_table_Delete" DeleteCommandType="StoredProcedure" InsertCommand="Subject_table_Insert" InsertCommandType="StoredProcedure" SelectCommand="Subject_table_Select" SelectCommandType="StoredProcedure" UpdateCommand="Subject_table_Update" UpdateCommandType="StoredProcedure">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" DeleteCommand="AcademicTitle_table_Delete" DeleteCommandType="StoredProcedure" InsertCommand="AcademicTitle_table_INSERT" InsertCommandType="StoredProcedure" SelectCommand="AcademicTitle_table_Select" SelectCommandType="StoredProcedure" UpdateCommand="AcademicTitle_table_Update" UpdateCommandType="StoredProcedure">
         <DeleteParameters>
             <asp:Parameter Name="Id" Type="Int32" />
         </DeleteParameters>
         <InsertParameters>
-            <asp:Parameter Name="Subject_table" Type="String" />
+            <asp:Parameter Name="AcademicTitle" Type="String" />
         </InsertParameters>
         <UpdateParameters>
             <asp:Parameter Name="id" Type="Int32" />
-            <asp:Parameter Name="SubjectName" Type="String" />
+            <asp:Parameter Name="AcademicTitle" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
     <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="id">
         <Columns>
-            <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButtonInHeader="True" VisibleIndex="0" ButtonType="Image">
+            <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButtonInHeader="True" VisibleIndex="0" ButtonType="Image" Caption="Академическая степень">
                 <NewButton Text="Додати">
                     <Image AlternateText="Додати" Height="16px" Width="16px" Url="~/_Иконки/Add.ico">
                     </Image>
@@ -43,10 +43,11 @@
                     <Image AlternateText="Зберегти" Height="16px" Url="~/_Иконки/Ok.ico" Width="16px" />
                 </UpdateButton>
             </dx:GridViewCommandColumn>
+        
             <dx:GridViewDataTextColumn FieldName="id" ReadOnly="True" VisibleIndex="1" Visible="False">
                 <EditFormSettings Visible="False" />
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="SubjectName" VisibleIndex="2" Caption="Название предмета">
+            <dx:GridViewDataTextColumn FieldName="AcademicTitle" VisibleIndex="2" Caption="Учебная степень">
             </dx:GridViewDataTextColumn>
         </Columns>
     </dx:ASPxGridView>

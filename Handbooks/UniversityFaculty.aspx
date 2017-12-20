@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Main.master"  Inherits="ScheduleDataBaseWebApplication._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Main.master" CodeBehind="UniversityFaculty.aspx.cs" Inherits="ScheduleDataBaseWebApplication._Default" %>
 
 <%@ Register Assembly="DevExpress.Web.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxClasses" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
@@ -10,16 +10,22 @@
 
 
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" DeleteCommand="Subject_table_Delete" DeleteCommandType="StoredProcedure" InsertCommand="Subject_table_Insert" InsertCommandType="StoredProcedure" SelectCommand="Subject_table_Select" SelectCommandType="StoredProcedure" UpdateCommand="Subject_table_Update" UpdateCommandType="StoredProcedure">
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [UniversityHousing_table]"></asp:SqlDataSource>
+
+
+
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" DeleteCommand="UniversityFaculty_table_Delete" DeleteCommandType="StoredProcedure" InsertCommand="UniversityFaculty_table_Insert" InsertCommandType="StoredProcedure" SelectCommand="UniversityFaculty_table_Select" SelectCommandType="StoredProcedure" UpdateCommand="UniversityFaculty_table_Update" UpdateCommandType="StoredProcedure">
         <DeleteParameters>
             <asp:Parameter Name="Id" Type="Int32" />
         </DeleteParameters>
         <InsertParameters>
-            <asp:Parameter Name="Subject_table" Type="String" />
+            <asp:Parameter Name="NameFaculty" Type="String" />
+            <asp:Parameter Name="id_UniversityHousing" Type="Int32" />
         </InsertParameters>
         <UpdateParameters>
             <asp:Parameter Name="id" Type="Int32" />
-            <asp:Parameter Name="SubjectName" Type="String" />
+            <asp:Parameter Name="NameFaculty" Type="String" />
+            <asp:Parameter Name="id_UniversityHousing" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
     <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="id">
@@ -46,8 +52,12 @@
             <dx:GridViewDataTextColumn FieldName="id" ReadOnly="True" VisibleIndex="1" Visible="False">
                 <EditFormSettings Visible="False" />
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="SubjectName" VisibleIndex="2" Caption="Название предмета">
+            <dx:GridViewDataTextColumn FieldName="NameFaculty" VisibleIndex="2" Caption="Название">
             </dx:GridViewDataTextColumn>
+            <dx:GridViewDataComboBoxColumn Caption="Адрес" FieldName="id_UniversityHousing" ShowInCustomizationForm="True" VisibleIndex="3">
+                <PropertiesComboBox DataSourceID="SqlDataSource2" TextField="AddressStreet" ValueField="id">
+                </PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
         </Columns>
     </dx:ASPxGridView>
 

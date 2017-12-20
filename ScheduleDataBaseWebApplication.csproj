@@ -105,7 +105,15 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Handbooks\AcademicTitle.aspx" />
+    <Content Include="Handbooks\Group.aspx" />
+    <Content Include="Handbooks\LectureHall.aspx" />
     <Content Include="Handbooks\Subject.aspx" />
+    <Content Include="Handbooks\UniversityTime.aspx" />
+    <Content Include="Handbooks\UniversityTeachers.aspx" />
+    <Content Include="Handbooks\UniversityPulpit.aspx" />
+    <Content Include="Handbooks\UniversityHousing.aspx" />
+    <Content Include="Handbooks\UniversityFaculty.aspx" />
     <Content Include="_Документы\ДоступБД.txt" />
     <Content Include="_Иконки\Add 1.ico" />
     <Content Include="_Иконки\Add.ico" />
@@ -207,12 +215,68 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handbooks\AcademicTitle.aspx.cs">
+      <DependentUpon>AcademicTitle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Handbooks\AcademicTitle.aspx.designer.cs">
+      <DependentUpon>AcademicTitle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handbooks\Group.aspx.cs">
+      <DependentUpon>Group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Handbooks\Group.aspx.designer.cs">
+      <DependentUpon>Group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handbooks\LectureHall.aspx.cs">
+      <DependentUpon>LectureHall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Handbooks\LectureHall.aspx.designer.cs">
+      <DependentUpon>LectureHall.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Handbooks\Subject.aspx.cs">
       <DependentUpon>Subject.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Handbooks\Subject.aspx.designer.cs">
       <DependentUpon>Subject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handbooks\UniversityTime.aspx.cs">
+      <DependentUpon>UniversityTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Handbooks\UniversityTime.aspx.designer.cs">
+      <DependentUpon>UniversityTime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handbooks\UniversityTeachers.aspx.cs">
+      <DependentUpon>UniversityTeachers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Handbooks\UniversityTeachers.aspx.designer.cs">
+      <DependentUpon>UniversityTeachers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handbooks\UniversityPulpit.aspx.cs">
+      <DependentUpon>UniversityPulpit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Handbooks\UniversityPulpit.aspx.designer.cs">
+      <DependentUpon>UniversityPulpit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handbooks\UniversityHousing.aspx.cs">
+      <DependentUpon>UniversityHousing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Handbooks\UniversityHousing.aspx.designer.cs">
+      <DependentUpon>UniversityHousing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handbooks\UniversityFaculty.aspx.cs">
+      <DependentUpon>UniversityFaculty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Handbooks\UniversityFaculty.aspx.designer.cs">
+      <DependentUpon>UniversityFaculty.aspx</DependentUpon>
     </Compile>
     <Compile Include="Light.master.cs">
       <DependentUpon>Light.master</DependentUpon>

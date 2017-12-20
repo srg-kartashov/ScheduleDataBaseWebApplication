@@ -2,5 +2,12 @@
 <menu>
   <group Text="Словари">
     <item NavigateUrl ="~\Handbooks\Subject.aspx" Text="Учебные дисциплины" />
+    <item NavigateUrl ="~\Handbooks\AcademicTitle.aspx" Text="Академическая степень" />
+    <item NavigateUrl ="~\Handbooks\LectureHall.aspx" Text="Аудитория" />
+    <item NavigateUrl ="~\Handbooks\UniversityFaculty.aspx" Text="Факультет" />
+    <item NavigateUrl ="~\Handbooks\UniversityHousing.aspx" Text="Корпус" />
+    <item NavigateUrl ="~\Handbooks\UniversityPulpit.aspx" Text="Кафедра" />
+    <item NavigateUrl ="~\Handbooks\UniversityTeachers.aspx" Text="Преподаватель" />
+    <item NavigateUrl ="~\Handbooks\UniversityTime.aspx" Text="Время" />
   </group>
 </menu>
