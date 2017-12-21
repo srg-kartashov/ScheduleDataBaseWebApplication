@@ -26,21 +26,43 @@
             <asp:Parameter Name="TeachersPatronymic" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceAcademic" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [AcademicTitle_table]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourcePulpit" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [UniversityPulpit_table]"></asp:SqlDataSource>
     <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="id">
         <Columns>
-            <dx:GridViewDataTextColumn FieldName="id" ReadOnly="True" VisibleIndex="0">
-                <EditFormSettings Visible="False" />
+             <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButtonInHeader="True" VisibleIndex="0" ButtonType="Image">
+                <NewButton Text="Додати">
+                    <Image AlternateText="Додати" Height="16px" Width="16px" Url="~/_Иконки/Add.ico">
+                    </Image>
+                </NewButton>
+                <EditButton Text="Змінити">
+                    <Image AlternateText="Змінити" Height="16px" Width="16px" Url="~/_Иконки/Edit.ico">
+                    </Image>
+                </EditButton>
+                <CancelButton Text="Відмінити">
+                    <Image AlternateText="Відмінити" Height="16px" Url="~/_Иконки/Knob Snapback.ico" Width="16px" />
+                </CancelButton>
+                <DeleteButton Text="Видалити">
+                    <Image Height="16" Width="16" Url="~/_Иконки/Delete 2.ico" />
+                </DeleteButton>
+                <UpdateButton Text="Зберегти">
+                    <Image AlternateText="Зберегти" Height="16px" Url="~/_Иконки/Ok.ico" Width="16px" />
+                </UpdateButton>
+            </dx:GridViewCommandColumn>
+            <dx:GridViewDataTextColumn FieldName="TeachersSurname" VisibleIndex="1" Caption="Фамилия">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="TeachersSurname" VisibleIndex="1">
+            <dx:GridViewDataTextColumn FieldName="TeachersName" VisibleIndex="2" Caption="Имя">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="TeachersName" VisibleIndex="2">
+            <dx:GridViewDataTextColumn FieldName="TeachersPatronymic" VisibleIndex="3" Caption="Отчество">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="TeachersPatronymic" VisibleIndex="3">
-            </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="id_AcademicDegree" VisibleIndex="4">
-            </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="id_UniversityPulpit" VisibleIndex="5">
-            </dx:GridViewDataTextColumn>
+             <dx:GridViewDataComboBoxColumn Caption="Академическое звание" FieldName="id_AcademicDegree" VisibleIndex="5">
+                 <PropertiesComboBox DataSourceID="SqlDataSourceAcademic" TextField="AcademicTitle" ValueField="id">
+                 </PropertiesComboBox>
+             </dx:GridViewDataComboBoxColumn>
+             <dx:GridViewDataComboBoxColumn Caption="Кафедра" FieldName="id_UniversityPulpit" VisibleIndex="6">
+                 <PropertiesComboBox DataSourceID="SqlDataSourcePulpit" TextField="NamePulpit" ValueField="id">
+                 </PropertiesComboBox>
+             </dx:GridViewDataComboBoxColumn>
         </Columns>
     </dx:ASPxGridView>
 

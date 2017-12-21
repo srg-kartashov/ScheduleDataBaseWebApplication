@@ -26,14 +26,31 @@
     </asp:SqlDataSource>
     <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="id">
         <Columns>
-            <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButtonInHeader="True" VisibleIndex="0">
+             <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButtonInHeader="True" VisibleIndex="0" ButtonType="Image">
+                <NewButton Text="Додати">
+                    <Image AlternateText="Додати" Height="16px" Width="16px" Url="~/_Иконки/Add.ico">
+                    </Image>
+                </NewButton>
+                <EditButton Text="Змінити">
+                    <Image AlternateText="Змінити" Height="16px" Width="16px" Url="~/_Иконки/Edit.ico">
+                    </Image>
+                </EditButton>
+                <CancelButton Text="Відмінити">
+                    <Image AlternateText="Відмінити" Height="16px" Url="~/_Иконки/Knob Snapback.ico" Width="16px" />
+                </CancelButton>
+                <DeleteButton Text="Видалити">
+                    <Image Height="16" Width="16" Url="~/_Иконки/Delete 2.ico" />
+                </DeleteButton>
+                <UpdateButton Text="Зберегти">
+                    <Image AlternateText="Зберегти" Height="16px" Url="~/_Иконки/Ok.ico" Width="16px" />
+                </UpdateButton>
             </dx:GridViewCommandColumn>
-            <dx:GridViewDataTextColumn FieldName="id" ReadOnly="True" VisibleIndex="1">
+            <dx:GridViewDataTextColumn FieldName="id" ReadOnly="True" VisibleIndex="1" Visible="False">
                 <EditFormSettings Visible="False" />
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="AddressStreet" VisibleIndex="2">
+            <dx:GridViewDataTextColumn FieldName="AddressStreet" VisibleIndex="2" Caption="Улица">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="AddressNumber" VisibleIndex="3">
+            <dx:GridViewDataTextColumn FieldName="AddressNumber" VisibleIndex="3" Caption="Номер">
             </dx:GridViewDataTextColumn>
         </Columns>
     </dx:ASPxGridView>

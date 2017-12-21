@@ -19,15 +19,24 @@ namespace ScheduleDataBaseWebApplication {
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        
+
         
         /// <summary>
-        /// ASPxGridView1 элемент управления.
+        /// SqlDataSourceAcademic элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-       
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceAcademic;
+        
+        /// <summary>
+        /// SqlDataSourcePulpit элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+     
     }
 }

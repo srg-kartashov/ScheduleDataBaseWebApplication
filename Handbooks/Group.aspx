@@ -58,23 +58,27 @@
                     <Image AlternateText="Зберегти" Height="16px" Url="~/_Иконки/Ok.ico" Width="16px" />
                 </UpdateButton>
             </dx:GridViewCommandColumn>
-            <dx:GridViewDataTextColumn FieldName="id" ReadOnly="True" VisibleIndex="1">
+            <dx:GridViewDataTextColumn FieldName="id" ReadOnly="True" VisibleIndex="1" Visible="False">
                 <EditFormSettings Visible="False" />
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="NameOfGroup" VisibleIndex="2">
+            <dx:GridViewDataTextColumn FieldName="NameOfGroup" VisibleIndex="2" Caption="Название">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="YearStart" VisibleIndex="5">
+            <dx:GridViewDataTextColumn FieldName="YearStart" VisibleIndex="5" Caption="Начало обучения">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="YearFinish" VisibleIndex="6">
+            <dx:GridViewDataTextColumn FieldName="YearFinish" VisibleIndex="6" Caption="Конец обучения">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="id_UniversityPulpit" VisibleIndex="7">
+            <dx:GridViewDataTextColumn FieldName="Subgroup" VisibleIndex="9" Caption="Подгруппа">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="Subgroup" VisibleIndex="8">
-            </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="id_Faculty" VisibleIndex="9">
-            </dx:GridViewDataTextColumn>
-             <dx:GridViewDataComboBoxColumn FieldName="id_UniversityTeachers" VisibleIndex="4">
+             <dx:GridViewDataComboBoxColumn FieldName="id_UniversityTeachers" VisibleIndex="4" Caption="Куратор">
                  <PropertiesComboBox DataSourceID="SqlDataSource4" TextField="TeachersSurname" ValueField="id">
+                 </PropertiesComboBox>
+             </dx:GridViewDataComboBoxColumn>
+             <dx:GridViewDataComboBoxColumn Caption="Кафедра" FieldName="id_UniversityPulpit" VisibleIndex="8">
+                 <PropertiesComboBox DataSourceID="SqlDataSource2" TextField="NamePulpit" ValueField="id">
+                 </PropertiesComboBox>
+             </dx:GridViewDataComboBoxColumn>
+             <dx:GridViewDataComboBoxColumn Caption="Факультет" FieldName="id_Faculty" VisibleIndex="10">
+                 <PropertiesComboBox DataSourceID="SqlDataSource3" TextField="NameFaculty" ValueField="id">
                  </PropertiesComboBox>
              </dx:GridViewDataComboBoxColumn>
         </Columns>

@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <menu>
+  <group Text="Расписание">
+    <item NavigateUrl ="~\Schedule\ScheduleView.aspx" Text="Просмотр" />
+  </group>
   <group Text="Словари">
     <item NavigateUrl ="~\Handbooks\Subject.aspx" Text="Учебные дисциплины" />
     <item NavigateUrl ="~\Handbooks\AcademicTitle.aspx" Text="Академическая степень" />
@@ -9,5 +12,6 @@
     <item NavigateUrl ="~\Handbooks\UniversityPulpit.aspx" Text="Кафедра" />
     <item NavigateUrl ="~\Handbooks\UniversityTeachers.aspx" Text="Преподаватель" />
     <item NavigateUrl ="~\Handbooks\UniversityTime.aspx" Text="Время" />
+    <item NavigateUrl ="~\Handbooks\Group.aspx" Text="Группы" />
   </group>
 </menu>
