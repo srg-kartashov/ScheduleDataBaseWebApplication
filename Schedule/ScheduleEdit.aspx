@@ -10,62 +10,48 @@
 
     <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourceScheduleEdit" KeyFieldName="id">
         <Columns>
-            <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButtonInHeader="True" VisibleIndex="0" ButtonType="Image">
-                <NewButton Text="Додати">
-                    <Image AlternateText="Додати" Height="16px" Width="16px" Url="~/_Иконки/Add.ico">
-                    </Image>
-                </NewButton>
-                <EditButton Text="Змінити">
-                    <Image AlternateText="Змінити" Height="16px" Width="16px" Url="~/_Иконки/Edit.ico">
-                    </Image>
-                </EditButton>
-                <CancelButton Text="Відмінити">
-                    <Image AlternateText="Відмінити" Height="16px" Url="~/_Иконки/Knob Snapback.ico" Width="16px" />
-                </CancelButton>
-                <DeleteButton Text="Видалити">
-                    <Image Height="16" Width="16" Url="~/_Иконки/Delete 2.ico" />
-                </DeleteButton>
-                <UpdateButton Text="Зберегти">
-                    <Image AlternateText="Зберегти" Height="16px" Url="~/_Иконки/Ok.ico" Width="16px" />
-                </UpdateButton>
-            </dx:GridViewCommandColumn>
-            <dx:GridViewDataTextColumn FieldName="id" ReadOnly="True" VisibleIndex="1" Visible="False">
+            <dx:GridViewDataTextColumn FieldName="id" ReadOnly="True" VisibleIndex="0">
                 <EditFormSettings Visible="False" />
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataCheckColumn FieldName="isFlow" VisibleIndex="18" Caption="Поточность">
+            <dx:GridViewDataTextColumn FieldName="id_Subject" VisibleIndex="1">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="id_Group" VisibleIndex="2">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="id_UniversityTeachers" VisibleIndex="3">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="id_LectureHall" VisibleIndex="4">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="id_Day" VisibleIndex="5">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="id_UniversityTime" VisibleIndex="6">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="id_TypeWeek" VisibleIndex="7">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="id_TypeOfSubject" VisibleIndex="8">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataCheckColumn FieldName="isFlow" VisibleIndex="9">
             </dx:GridViewDataCheckColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Группа" FieldName="id_Group" VisibleIndex="3">
-                <PropertiesComboBox DataSourceID="SqlDataSource_Group" TextField="NameOfGroup" ValueField="id">
-                </PropertiesComboBox>
-            </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Предмет" FieldName="id_Subject" VisibleIndex="5">
-                <PropertiesComboBox DataSourceID="SqlDataSource_Subject" TextField="SubjectName" ValueField="id">
-                </PropertiesComboBox>
-            </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Тип предмета" FieldName="id_TypeOfSubject" VisibleIndex="7">
-                <PropertiesComboBox DataSourceID="SqlDataSource_Type_Of_Subject" TextField="NameOfSubjectType" ValueField="id">
-                </PropertiesComboBox>
-            </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Время" FieldName="id_UniversityTime" VisibleIndex="9">
-                <PropertiesComboBox DataSourceID="SqlDataSource_University_Time" TextField="NumberCouple" ValueField="id">
-                </PropertiesComboBox>
-            </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="День" FieldName="id_Day" VisibleIndex="11">
-                <PropertiesComboBox DataSourceID="SqlDataSource_Day" TextField="NameOfDay" ValueField="id">
-                </PropertiesComboBox>
-            </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Тип Недели" FieldName="id_TypeWeek" VisibleIndex="13">
-                <PropertiesComboBox DataSourceID="SqlDataSource_Type_Week" TextField="TypeWeek" ValueField="id">
-                </PropertiesComboBox>
-            </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Преподователь" FieldName="id_UniversityTeachers" VisibleIndex="15">
-                <PropertiesComboBox DataSourceID="SqlDataSource_University_Teachers" TextField="TeachersSurname" ValueField="id">
-                </PropertiesComboBox>
-            </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Аудитория" FieldName="id_LectureHall" VisibleIndex="17">
-                <PropertiesComboBox DataSourceID="SqlDataSource_Lecture_Hall" TextField="NumberLectureHall" ValueField="id">
-                </PropertiesComboBox>
-            </dx:GridViewDataComboBoxColumn>
+            <dx:GridViewDataTextColumn FieldName="id1" ReadOnly="True" VisibleIndex="10">
+                <EditFormSettings Visible="False" />
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="NameOfGroup" VisibleIndex="11">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="id_UniversityTeachers1" VisibleIndex="12">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="YearStart" VisibleIndex="13">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="YearFinish" VisibleIndex="14">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="id_UniversityPulpit" VisibleIndex="15">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="Subgroup" VisibleIndex="16">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="id_Faculty" VisibleIndex="17">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="Course" ReadOnly="True" VisibleIndex="18">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="nameGroup" ReadOnly="True" VisibleIndex="19">
+            </dx:GridViewDataTextColumn>
         </Columns>
         <Settings ShowFilterRow="True" />
     </dx:ASPxGridView>
