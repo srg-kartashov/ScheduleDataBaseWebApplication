@@ -2,6 +2,7 @@
 <menu>
   <group Text="Расписание">
     <item NavigateUrl ="~\Schedule\ScheduleView.aspx" Text="Просмотр" />
+    <item NavigateUrl ="~\Schedule\ScheduleEdit.aspx" Text="Редактирование" />
   </group>
   <group Text="Словари">
     <item NavigateUrl ="~\Handbooks\Subject.aspx" Text="Учебные дисциплины" />

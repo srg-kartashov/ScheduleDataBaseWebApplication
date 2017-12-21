@@ -8,13 +8,6 @@
 
 <asp:Content ID="Content" ContentPlaceHolderID="MainContent" runat="server">
 
-
-
-   
-    
-
-
-
     <asp:SqlDataSource ID="SqlDataSourceScheduleView" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="Schedule_table_Select" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
     <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourceScheduleView" KeyFieldName="id">
         <Columns>

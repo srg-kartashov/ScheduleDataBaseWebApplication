@@ -28,7 +28,7 @@ namespace ScheduleDataBaseWebApplication {
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView.ASPxGridView ASPxGridView1;
+
         
         /// <summary>
         /// SqlDataSourceGroup элемент управления.

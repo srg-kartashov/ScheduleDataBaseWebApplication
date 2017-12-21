@@ -19,7 +19,7 @@ namespace ScheduleDataBaseWebApplication {
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView.ASPxGridView ASPxGridView1;
+
         
         /// <summary>
         /// SqlDataSourceScheduleEdit элемент управления.
@@ -31,84 +31,75 @@ namespace ScheduleDataBaseWebApplication {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceScheduleEdit;
         
         /// <summary>
-        /// SqlDataSource2 элемент управления.
+        /// SqlDataSource_Subject элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_Subject;
         
         /// <summary>
-        /// SqlDataSource3 элемент управления.
+        /// SqlDataSource_Group элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_Group;
         
         /// <summary>
-        /// SqlDataSource4 элемент управления.
+        /// SqlDataSource_University_Teachers элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource4;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_University_Teachers;
         
         /// <summary>
-        /// SqlDataSource5 элемент управления.
+        /// SqlDataSource_Lecture_Hall элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource5;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_Lecture_Hall;
         
         /// <summary>
-        /// SqlDataSource6 элемент управления.
+        /// SqlDataSource_Day элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource6;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_Day;
         
         /// <summary>
-        /// SqlDataSource7 элемент управления.
+        /// SqlDataSource_University_Time элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource7;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_University_Time;
         
         /// <summary>
-        /// SqlDataSource8 элемент управления.
+        /// SqlDataSource_Type_Week элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource8;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_Type_Week;
         
         /// <summary>
-        /// SqlDataSource9 элемент управления.
+        /// SqlDataSource_Type_Of_Subject элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource9;
-        
-        /// <summary>
-        /// SqlDataSource10 элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource10;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_Type_Of_Subject;
     }
 }
