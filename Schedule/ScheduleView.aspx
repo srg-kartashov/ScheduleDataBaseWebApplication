@@ -18,45 +18,59 @@
     <asp:SqlDataSource ID="SqlDataSourceScheduleView" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="Schedule_table_Select" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
     <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourceScheduleView" KeyFieldName="id">
         <Columns>
-           <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButtonInHeader="True" VisibleIndex="0" ButtonType="Image">
-                <NewButton Text="Додати">
-                    <Image AlternateText="Додати" Height="16px" Width="16px" Url="~/_Иконки/Add.ico">
-                    </Image>
-                </NewButton>
-                <EditButton Text="Змінити">
-                    <Image AlternateText="Змінити" Height="16px" Width="16px" Url="~/_Иконки/Edit.ico">
-                    </Image>
-                </EditButton>
-                <CancelButton Text="Відмінити">
-                    <Image AlternateText="Відмінити" Height="16px" Url="~/_Иконки/Knob Snapback.ico" Width="16px" />
-                </CancelButton>
-                <DeleteButton Text="Видалити">
-                    <Image Height="16" Width="16" Url="~/_Иконки/Delete 2.ico" />
-                </DeleteButton>
-                <UpdateButton Text="Зберегти">
-                    <Image AlternateText="Зберегти" Height="16px" Url="~/_Иконки/Ok.ico" Width="16px" />
-                </UpdateButton>
-            </dx:GridViewCommandColumn>
-            <dx:GridViewDataTextColumn FieldName="id_Subject" VisibleIndex="1">
-            </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="id_Group" VisibleIndex="2">
-            </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="id_UniversityTeachers" VisibleIndex="3">
-            </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="id_LectureHall" VisibleIndex="4">
-            </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="id_Day" VisibleIndex="5">
-            </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="id_UniversityTime" VisibleIndex="6">
-            </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="id_TypeWeek" VisibleIndex="7">
-            </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="id_TypeOfSubject" VisibleIndex="8">
-            </dx:GridViewDataTextColumn>
-            <dx:GridViewDataCheckColumn FieldName="isFlow" VisibleIndex="9">
+            <dx:GridViewDataCheckColumn FieldName="isFlow" VisibleIndex="20" Visible="False">
             </dx:GridViewDataCheckColumn>
+            <dx:GridViewDataComboBoxColumn Caption="Группа" FieldName="id_Group" VisibleIndex="2">
+                <PropertiesComboBox DataSourceID="SqlDataSourceGroup" TextField="NameOfGroup" ValueField="id">
+                </PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
+            <dx:GridViewDataComboBoxColumn Caption="Предмет" FieldName="id_Subject" VisibleIndex="4">
+                <PropertiesComboBox DataSourceID="SqlDataSourceSubject" TextField="SubjectName" ValueField="id">
+                </PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
+            <dx:GridViewDataComboBoxColumn Caption="Тип предмета" FieldName="id_TypeOfSubject" VisibleIndex="6">
+                <PropertiesComboBox DataSourceID="SqlDataSourceTypeOfSubject" TextField="NameOfSubjectType" ValueField="id">
+                </PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
+            <dx:GridViewDataComboBoxColumn Caption="Время" FieldName="id_UniversityTime" VisibleIndex="8">
+                <PropertiesComboBox DataSourceID="SqlDataSourceUniversityTime" TextField="NumberCouple" ValueField="id">
+                </PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
+            <dx:GridViewDataComboBoxColumn Caption="День" FieldName="id_Day" VisibleIndex="10">
+                <PropertiesComboBox DataSourceID="SqlDataSourceDay" TextField="NameOfDay" ValueField="id">
+                </PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
+            <dx:GridViewDataComboBoxColumn Caption="Тип недели" FieldName="id_TypeWeek" VisibleIndex="12">
+                <PropertiesComboBox DataSourceID="SqlDataSourceTypeWeek" TextField="TypeWeek" ValueField="id">
+                </PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
+            <dx:GridViewDataComboBoxColumn Caption="Преподаватель" FieldName="id_UniversityTeachers" VisibleIndex="14">
+                <PropertiesComboBox DataSourceID="SqlDataSourceUniversityTeachers" TextField="TeachersSurname" ValueField="id">
+                </PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
+            <dx:GridViewDataComboBoxColumn Caption="Аудитория" FieldName="id_LectureHall" VisibleIndex="19">
+                <PropertiesComboBox DataSourceID="SqlDataSourceLectureHall" TextField="NumberLectureHall" ValueField="id">
+                </PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
         </Columns>
+        <Settings ShowFilterRow="True" />
     </dx:ASPxGridView>
+
+
+
+   
+    
+
+
+
+    <asp:SqlDataSource ID="SqlDataSourceGroup" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [Group_table]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceSubject" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [Subject_table]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceTypeOfSubject" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [TypeOfSubject_table]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceUniversityTime" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [UniversityTime_table]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceDay" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [Day_table]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceTypeWeek" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [TypeWeek_table]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceUniversityTeachers" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [UniversityTeachers_table]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceLectureHall" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [LectureHall_table]"></asp:SqlDataSource>
 
 
 

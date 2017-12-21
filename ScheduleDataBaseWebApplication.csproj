@@ -114,6 +114,7 @@
     <Content Include="Handbooks\UniversityPulpit.aspx" />
     <Content Include="Handbooks\UniversityHousing.aspx" />
     <Content Include="Handbooks\UniversityFaculty.aspx" />
+    <Content Include="Schedule\ScheduleEdit.aspx" />
     <Content Include="Schedule\ScheduleView.aspx" />
     <Content Include="_Документы\ДоступБД.txt" />
     <Content Include="_Иконки\Add 1.ico" />
@@ -300,6 +301,13 @@
     </Compile>
     <Compile Include="Root.master.designer.cs">
       <DependentUpon>Root.master</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\ScheduleEdit.aspx.cs">
+      <DependentUpon>ScheduleEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\ScheduleEdit.aspx.designer.cs">
+      <DependentUpon>ScheduleEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Schedule\ScheduleView.aspx.cs">
       <DependentUpon>ScheduleView.aspx</DependentUpon>
