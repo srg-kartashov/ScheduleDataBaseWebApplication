@@ -19,7 +19,7 @@ namespace ScheduleDataBaseWebApplication {
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-      
+  
         
         /// <summary>
         /// SqlDataSourceScheduleEdit элемент управления.
@@ -74,6 +74,15 @@ namespace ScheduleDataBaseWebApplication {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_Day;
+        
+        /// <summary>
+        /// SqlDataSourceUniversityHousing элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceUniversityHousing;
         
         /// <summary>
         /// SqlDataSource_University_Time элемент управления.

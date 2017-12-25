@@ -11,7 +11,7 @@
     <asp:SqlDataSource ID="SqlDataSourceScheduleView" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="Schedule_table_Select" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
     <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourceScheduleView" KeyFieldName="id">
         <Columns>
-            <dx:GridViewDataCheckColumn FieldName="isFlow" VisibleIndex="20" Visible="False">
+            <dx:GridViewDataCheckColumn FieldName="isFlow" VisibleIndex="22" Visible="False">
             </dx:GridViewDataCheckColumn>
             <dx:GridViewDataComboBoxColumn Caption="Группа" FieldName="id_Group" VisibleIndex="2">
                 <PropertiesComboBox DataSourceID="SqlDataSourceGroup" TextField="NameOfGroup" ValueField="id">
@@ -41,8 +41,12 @@
                 <PropertiesComboBox DataSourceID="SqlDataSourceUniversityTeachers" TextField="TeachersSurname" ValueField="id">
                 </PropertiesComboBox>
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Аудитория" FieldName="id_LectureHall" VisibleIndex="19">
+            <dx:GridViewDataComboBoxColumn Caption="Аудитория" FieldName="id_LectureHall" VisibleIndex="21">
                 <PropertiesComboBox DataSourceID="SqlDataSourceLectureHall" TextField="NumberLectureHall" ValueField="id">
+                </PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
+            <dx:GridViewDataComboBoxColumn Caption="Адрес" FieldName="id_UniversityHousing" VisibleIndex="20">
+                <PropertiesComboBox DataSourceID="SqlDataSourceUniversityHousing" TextField="AddressStreet" ValueField="id">
                 </PropertiesComboBox>
             </dx:GridViewDataComboBoxColumn>
         </Columns>
@@ -62,6 +66,7 @@
     <asp:SqlDataSource ID="SqlDataSourceUniversityTime" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [UniversityTime_table]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="SqlDataSourceDay" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [Day_table]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="SqlDataSourceTypeWeek" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [TypeWeek_table]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceUniversityHousing" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [UniversityHousing_table]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="SqlDataSourceUniversityTeachers" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [UniversityTeachers_table]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="SqlDataSourceLectureHall" runat="server" ConnectionString="<%$ ConnectionStrings:rasConnectionString %>" SelectCommand="SELECT * FROM [LectureHall_table]"></asp:SqlDataSource>
 
